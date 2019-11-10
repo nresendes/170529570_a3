@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.column {
+
+}
+.profile {
+    padding: 5rem 0;
+}
+.profile::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.container {
+    max-width: 93.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+.profile-image img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    left: 30%;
+    position: relative;
+}
+.profile-user-settings {
+    float: left;
+    width: calc(66.666% - 2rem);
+    margin-top: 1.1rem;
+}
+.profile-real-name {
+    font-weight: 600;
+}
+.profile-user-name {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 300;
+    font-family: 'Arial';
+}
+.profile-bio {
+    font-size: 14px;
+    font-family: 'Arial';
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+}
+
+.row {
+  display: flex;
+  width: 980px;
+  margin: auto;
+}
+
+div img {
+  width: 293px;
+  height: 293px;
+  align-self: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 293px;
+  height: 293px;
+  margin: 12px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .row {
+      width: 100%;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .row {
+    width: 100%;
+  }
+  .profile-bio {
+    display: none;
+  }
+  .profile-image {
+      float: none;
+      margin: auto;
+      margin-left: 30%;
+  }
+  .profile-user-settings {
+      float: none;
+      margin-top: 1.1rem;
+      margin: auto;
+  }
+}
